@@ -1,0 +1,36 @@
+wins - holds the number of correctly guessed words (starts at 0)
+guessesRemaining - holds the number of guesses remaining for the current word (starts at 12)
+wordToGuess - holds the current word being guessed (should it be an array of chars?)
+still guessing - boolean flag for when it's time to move on to the next word
+guessedLetter - holds the current guessed letter
+
+wordBank[strings] - all the words to be guessed, hard coded
+guessedLetters[characters] - all the guessed letters for the current word
+
+
+
+
+I) Wait for user to press a key to begin
+
+II) Set up game
+-set wins to zero
+
+III) New Word
+-set guessesRemaining to 12
+-set guessedLetters[] to empty
+-get next word from wordBank[] and store it in wordToGuess
+-display string with all correctly guessed letters (currently none)
+
+-while word isn't totally guessed
+	ask for a letter
+	if the letter hasn't been guessed already
+		add it to guessedLetters[]
+		if it's in the word
+			(do what you need to do)
+		else
+			inform user
+	else
+		inform user
+
+-add 1 to wins
+-repeat III

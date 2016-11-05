@@ -4,6 +4,69 @@
 	<title>Hangman</title>
 </head>
 <body>
+	<script type="text/javascript">
+		
+		//Holds the number of correctly guessed words
+		var wins = 0;
+		//Holds the number of remaining guesses for the current word
+		var guessesRemaining;
+		//Holds the current word to be guessed
+		var wordToGuess;
+		//Flag for when it's time to move on to the next word
+		var stillGuessing = true;
+		//Holds the current guessed letter
+		var currentGuess;
 
+
+		//Holds all the words to be guessed
+		var wordBank = ["word1", "word2", "word3", "word4", "word5"];
+		//Holds all the guessed letters for the current word
+		var guessedLetters = [];
+
+		//Wait for user to press a key to begin
+		...
+		//Empty the guessedLetters array
+		guessedLetters = [];
+		//Load the word to be guessed from wordBank array
+		wordToGuess = word[i];
+		//Display the string with all correctly guessed letter (currently none)
+		...
+
+		//Until the word has been guessed or the user runs out of guesses...
+		while (stillGuessing) {
+			//Ask for a letter
+			currentGuess = prompt("Enter a letter: ");
+			//If the letter hasn't been guessed...
+			if (guessedLetters.indexOf(currentGuess) === -1) {
+				//Add the letter to guessedLetters[]
+				guessedLetters.push(currentGuess)
+				//If the letter is in the word...
+				...
+					//Do all the things
+					...
+					...
+					...
+				//If the letter isn't in the word or has already been guessed...
+				...
+					//Inform the user
+					...
+			}
+			//If the letter has been guessed...
+			else {
+				//Inform the user
+				alert("That letter has already been guessed!")
+			}
+		}
+
+		//Add 1 to wins
+		wins++;
+
+		//Repeat!
+		...
+
+
+
+
+	</script>
 </body>
 </html>
