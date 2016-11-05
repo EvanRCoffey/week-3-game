@@ -4,6 +4,14 @@
 	<title>Hangman</title>
 </head>
 <body>
+
+	<!--Display these items on screen at all times:
+	wins
+	guessesRemaining
+	guessedLetters[]
+	wordToGuess, with unguessed letters replaced by dashes
+	-->
+
 	<script type="text/javascript">
 		
 		//Holds the number of correctly guessed words
@@ -24,49 +32,62 @@
 		var guessedLetters = [];
 
 		//Wait for user to press a key to begin
-		...
-		//Empty the guessedLetters array
-		guessedLetters = [];
-		//Load the word to be guessed from wordBank array
-		wordToGuess = word[i];
-		//Display the string with all correctly guessed letter (currently none)
-		...
+      	document.onkeyup = function(event) {
 
-		//Until the word has been guessed or the user runs out of guesses...
-		while (stillGuessing) {
-			//Ask for a letter
-			currentGuess = prompt("Enter a letter: ");
-			//If the letter hasn't been guessed...
-			if (guessedLetters.indexOf(currentGuess) === -1) {
-				//Add the letter to guessedLetters[]
-				guessedLetters.push(currentGuess)
-				//If the letter is in the word...
-				...
-					//Do all the things
-					...
-					...
-					...
-				//If the letter isn't in the word or has already been guessed...
-				...
-					//Inform the user
-					...
-			}
-			//If the letter has been guessed...
-			else {
-				//Inform the user
-				alert("That letter has already been guessed!")
+	      	//Play the game five times...
+	      	for (var i = 0; i < 5; i++) {
+				//Empty the guessedLetters array
+				guessedLetters = [];
+				//Reset the number of guesses remaining
+				guessesRemaining = 12;
+				//Load the word to be guessed from wordBank array
+				wordToGuess = word[i];
+				//Until the word has been guessed or the user runs out of guesses...
+				while (stillGuessing) {
+					//Wait for user to press a key to begin
+		      		document.onkeyup = function(event) {
+		      			// Determine which key was pressed, then make it lowercase and store it in currentGuess
+		        		currentGuess = String.fromCharCode(event.keyCode).toLowerCase();
+						//If the letter hasn't been guessed...
+						if (guessedLetters.indexOf(currentGuess) === -1) {
+							//Add the letter to guessedLetters[]
+							guessedLetters.push(currentGuess)
+							//Decrement guessesRemaining
+							guessesRemaining--; 
+							//If the letter is in the word...
+							if (wordToGuess.indexOf(currentGuess) >= 0) {
+								//Do all the things
+								...
+								...
+								...
+								//If all the letters in the word have been guessed
+								...
+									//Increment wins
+									wins++;
+									//Change flag to exit while loop
+									stillGuessing = false;
+								//If the user is out of guesses...
+								if (guessesRemaining === 0) {
+									//Change flag to exit while loop
+									stillGuessing = false;
+								}
+							}
+							//If the letter isn't in the word...
+							else {
+								//Inform the user
+								alert("That letter is not in the word!")
+							}
+						}
+						//If the letter has been guessed...
+						else {
+							//Inform the user
+							alert("That letter has already been guessed!")
+						}
+					}
+				}
 			}
 		}
-
-		//Add 1 to wins
-		wins++;
-
-		//Repeat!
-		...
-
-
-
-
+	alert("Game over!")
 	</script>
 </body>
 </html>
