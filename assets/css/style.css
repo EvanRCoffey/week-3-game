@@ -1,0 +1,71 @@
+#pageHeader {
+	background-color: coral;
+	height: 75px;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	text-align: center;
+	border: 1px solid white;
+}
+
+#middleSection {
+	height: 400px;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+}
+
+#mainGameArea {
+	height: 400px;
+	background-color: coral;
+	margin-right: 8%;
+	border: 1px solid white;	
+}
+
+#currentWordArea {
+	border: 1px solid white;
+	height: 150px;
+}
+
+#messageArea {
+	border: 1px solid white;
+	height: 150px;
+}
+
+#guessedLettersArea {
+	border: 1px solid white;
+	height: 50px;
+}
+
+#guessesRemainingArea {
+	border: 1px solid white;
+	height: 50px;
+}
+
+#winsArea {
+	height: 200px;
+	background-color: coral;
+	border: 1px solid white;
+}
+
+#composersArea {
+	height: 200px;
+	background-color: coral;
+	border: 1px solid white;
+}
+
+#bottomSection {
+	height: 130px;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: coral;
+	border: 1px solid white;
+}
+
+body {
+	background-color: silver;
+}

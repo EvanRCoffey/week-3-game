@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Classical Composers Hangman</title>
+	<title>Classical Composer Hangman</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 	<!--Research how html/css displays javascript variables-->
@@ -13,9 +16,56 @@
 	lettersAndDashes[]
 	-->
 
-	<p id="wins"></p>
-	<p id="guessesRemaining"></p>
+<!--HTML CODE STARTS HERE!!!!!!!!!-->
 
+	<div id="pageHeader">
+		Classical Composer Hangman
+	</div>
+
+	<div class="container" id="middleSection">
+		<div class="row">
+			<div class="col-md-7" id="mainGameArea">
+				<div class="row" id="currentWordArea">
+					--------
+				</div>
+				<div class="row" id="messageArea">
+					Press any key to begin!
+				</div>
+				<div class="row" id="guessedLettersArea">
+					Letters already guessed: 
+				</div>
+				<div class="row" id="guessesRemainingArea">
+					Guesses remaining:
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row" id="winsArea">
+					Wins: 0
+				</div>
+				<div class="row" id="composersArea">
+					Composer 1: Beethoven
+					<br>
+					Composer 2: Tchaikovsky
+					<br>
+					Composer 3: Stravinsky
+					<br>
+					Composer 4: Vivaldi
+					<br>
+					Composer 5: Debussy
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="bottomSection">
+		<div class="row">
+			<div class="col-md-12">Cool stuff goes here</div>
+		</div>
+	</div>
+
+<!--JAVASCRIPT CODE STARTS HERE!!!!!!!-->
+<!--Commented out for now...-->
+<!--
 	<script type="text/javascript">
 		
 		//Holds the number of correctly guessed words
@@ -55,7 +105,7 @@
 				//Until the word has been guessed or the user runs out of guesses...
 				while (stillGuessing) {
 					console.log("worked");
-					//Wait!  There is an infinite loop happening here.
+					//Wait!  There is an infinite loop happening here when testing with console.log
 					//...
 					//When a user presses a button
 		      		document.onkeyup = function(event) {
@@ -111,5 +161,6 @@
 			}
 		}
 	</script>
+-->
 </body>
 </html>
