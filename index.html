@@ -10,15 +10,18 @@
 	wins
 	guessesRemaining
 	guessedLetters[]
-	wordToGuess, with unguessed letters replaced by dashes
+	lettersAndDashes[]
 	-->
+
+	<p id="wins"></p>
+	<p id="guessesRemaining"></p>
 
 	<script type="text/javascript">
 		
 		//Holds the number of correctly guessed words
 		var wins = 0;
 		//Holds the number of remaining guesses for the current word
-		var guessesRemaining;
+		var guessesRemaining = 12;
 		//Holds the current word to be guessed
 		var wordToGuess;
 		//Flag for when it's time to move on to the next word
@@ -43,15 +46,18 @@
 				//Reset the number of guesses remaining
 				guessesRemaining = 12;
 				//Load the word to be guessed from wordBank array
-				wordToGuess = word[i];
+				wordToGuess = wordBank[i];
 				//Reset to display all dashes
 				lettersAndDashes = [];
-				for (int i = 0; i < wordToGuess.length; i++) {
+				for (var i = 0; i < wordToGuess.length; i++) {
 					lettersAndDashes.push('-')
 				}
 				//Until the word has been guessed or the user runs out of guesses...
 				while (stillGuessing) {
-					//Wait for user to press a key to begin
+					console.log("worked");
+					//Wait!  There is an infinite loop happening here.
+					//...
+					//When a user presses a button
 		      		document.onkeyup = function(event) {
 		      			// Determine which key was pressed, then make it lowercase and store it in currentGuess
 		        		currentGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -64,7 +70,7 @@
 							//If the letter is in the word...
 							if (wordToGuess.indexOf(currentGuess) >= 0) {
 								//Replace the appropriate dashes with that letter
-								for (int i = 0; i < wordToGuess.length; i++) {
+								for (var i = 0; i < wordToGuess.length; i++) {
 									if (wordToGuess[i] === currentGuess) {
 										lettersAndDashes[i] = currentGuess;	
 									}
@@ -104,7 +110,6 @@
 				//...
 			}
 		}
-	alert("Game over!")
 	</script>
 </body>
 </html>
