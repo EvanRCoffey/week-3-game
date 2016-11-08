@@ -110,13 +110,13 @@ document.onkeyup = function(event) {
 							document.getElementById("currentWordArea").innerHTML = lettersAndDashes.join(" ");
 						}
 					}
-					//If all the letters in the word have been guessed
-					if (lettersAndDashes.indexOf('-') === -1)
+					//If all the letters in the word have been guessed or if the user is out of guesses
+					if (lettersAndDashes.indexOf('-') === -1 || guessesRemaining === 0)
 					{	
 						//Play some music!
 						playMusic(wordNum);
-						//Increment wins
-						wins++;
+						//Increment wins if appropriate, then display it
+						if (lettersAndDashes.indexOf('-') === -1) wins++;
 						document.getElementById("winsArea").innerHTML = "Wins: " + wins;
 						//Reset everything and start next word
 						reset();
