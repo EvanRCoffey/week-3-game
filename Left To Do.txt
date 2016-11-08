@@ -1,0 +1,7 @@
+1) Learn to display all of the elements on the screen using innerHTML (or something else if innerHTML is not the thing to use)
+
+2) Debug!
+
+3) Make the website look pretty
+
+4) Want to do any cool stuff?  Do that last.

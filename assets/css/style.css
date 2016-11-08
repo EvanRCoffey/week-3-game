@@ -1,4 +1,6 @@
 #pageHeader {
+	padding-top: 8px;
+	font-size: xx-large;
 	background-color: coral;
 	height: 75px;
 	width: 65%;
@@ -27,41 +29,44 @@
 #currentWordArea {
 	border: 1px solid white;
 	height: 150px;
+	text-align: center;
+	padding-top: 55px;
+	font-size: x-large;
 }
 
 #messageArea {
 	border: 1px solid white;
 	height: 150px;
+	text-align: center;
+	padding-top: 55px;
+	font-size: x-large;
 }
 
 #guessedLettersArea {
 	border: 1px solid white;
 	height: 50px;
+	text-align: center;
+	padding-top: 12px;
 }
 
 #guessesRemainingArea {
 	border: 1px solid white;
 	height: 50px;
+	text-align: center;
+	padding-top: 12px;
 }
 
 #winsArea {
 	height: 200px;
 	background-color: coral;
 	border: 1px solid white;
+	text-align: center;
+	padding-top: 80px;
+	font-size: large;
 }
 
 #composersArea {
 	height: 200px;
-	background-color: coral;
-	border: 1px solid white;
-}
-
-#bottomSection {
-	height: 130px;
-	width: 65%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
 	background-color: coral;
 	border: 1px solid white;
 }
