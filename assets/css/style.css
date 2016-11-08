@@ -1,7 +1,7 @@
 #pageHeader {
 	padding-top: 8px;
 	font-size: xx-large;
-	background-color: coral;
+	background-color: deepskyblue;
 	height: 75px;
 	width: 65%;
 	margin-left: auto;
@@ -21,7 +21,7 @@
 
 #mainGameArea {
 	height: 400px;
-	background-color: coral;
+	background-color: deepskyblue;
 	margin-right: 8%;
 	border: 1px solid white;	
 }
@@ -58,7 +58,7 @@
 
 #winsArea {
 	height: 200px;
-	background-color: coral;
+	background-color: deepskyblue;
 	border: 1px solid white;
 	text-align: center;
 	padding-top: 80px;
@@ -67,10 +67,13 @@
 
 #composersArea {
 	height: 200px;
-	background-color: coral;
+	background-color: deepskyblue;
 	border: 1px solid white;
+	text-align: center;
+	font-size: large;
+	padding-top: 40px;
 }
 
 body {
-	background-color: silver;
+	background-color: dimgrey;
 }
